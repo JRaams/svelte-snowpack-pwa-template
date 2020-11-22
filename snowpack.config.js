@@ -5,6 +5,10 @@ module.exports = {
     src: '/_dist_',
   },
   plugins: [
-    '@snowpack/plugin-svelte'
+    '@snowpack/plugin-svelte',
+    [
+      '@snowpack/plugin-optimize',
+      { preloadModules: true}
+    ]
   ]
 };
