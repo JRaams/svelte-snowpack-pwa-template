@@ -1,0 +1,13 @@
+{
+  "app": {
+    "language": {
+      "label": "Select a language:"
+    },
+
+    "header": {
+      "editAndReload": "Edit 'src/App.svelte' and save to reload.",
+      "pageHasBeenOpenFor": "Page has been open for {count} seconds.",
+      "learnSvelte": "Learn Svelte"
+    }
+  }
+}

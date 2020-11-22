@@ -1,0 +1,13 @@
+{
+  "app": {
+    "language": {
+      "label": "Kies een taal:"
+    },
+
+    "header": {
+      "editAndReload": "Wijzig en sla 'src/App.svelte' op voor live reload.",
+      "pageHasBeenOpenFor": "Pagina staat al {count} seconden open.",
+      "learnSvelte": "Leer Svelte"
+    }
+  }
+}
