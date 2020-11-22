@@ -1,101 +1,34 @@
 # svelte-snowpack-pwa-template
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+This is a project template for [Svelte](https://svelte.dev) apps.
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+## Tech
+Current:
+- [Svelte](https://svelte.dev) (v3): frontend component framework/ compiler.
+- [Snowpack](https://snowpack.dev) (v2): build tool, replacement for webpack for faster development.
+  - [@snowpack/plugin-optimize](https://github.com/snowpackjs/snowpack/tree/master/plugins/plugin-optimize) (v0.2): Optimize snowpack app: minify html, css, js
+- [Svelte-i18n](https://github.com/kaisermann/svelte-i18n) (v3.2): Internationalization package to allow easy switching of language and storage of text.
+- [Postcss](https://postcss.org/): Transform css with javascript
+    - [Autoprefixer](https://github.com/postcss/autoprefixer): Add vendor prefixes to CSS rules using values from Can I Use.
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
+Todo:
+- [Sass](https://www.sass-lang.com/): CSS extension to make styling the app easier.
+- [PWA](https://en.wikipedia.org/wiki/Progressive_web_applications): allows the site to work offline, and achieve higher (mobile) performance.
+- [Prettier](https://prettier.io/): Formats code issues like quote and semicolon usage.
+- [Eslint](https://eslint.org/): Finds and fixes problems in the code.
+- [Routify](https://routify.dev/): Automated routes based on file structure.  
 
 ## Get started
+Requires: [Node.js](https://nodejs.org), [yarn](https://classic.yarnpkg.com/en/docs/install/) (or [npm](https://www.npmjs.com/get-npm))
 
 Install the dependencies...
 
 ```bash
-cd svelte-app
-npm install
+yarn install
 ```
 
-...then start [Rollup](https://rollupjs.org):
+...then start [Snowpack](https://snowpack.dev):
 
 ```bash
-npm run dev
-```
-
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
-
-If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
-
-## Building and running in production mode
-
-To create an optimised version of the app:
-
-```bash
-npm run build
-```
-
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
-
-
-## Single-page app mode
-
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
-
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
-
-```js
-"start": "sirv public --single"
-```
-
-## Using TypeScript
-
-This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
-
-```bash
-node scripts/setupTypeScript.js
-```
-
-Or remove the script via:
-
-```bash
-rm scripts/setupTypeScript.js
-```
-
-## Deploying to the web
-
-### With [Vercel](https://vercel.com)
-
-Install `vercel` if you haven't already:
-
-```bash
-npm install -g vercel
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-vercel deploy --name my-project
-```
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
+yarn start
 ```

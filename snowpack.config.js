@@ -7,6 +7,9 @@ module.exports = {
   plugins: [
     '@snowpack/plugin-svelte',
     [
+      '@snowpack/plugin-build-script', { 'cmd': 'postcss', 'input': ['.css'], 'output': ['.css'] }
+    ],
+    [
       '@snowpack/plugin-optimize',
       { preloadModules: true}
     ]
