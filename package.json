@@ -3,17 +3,22 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
+    "clean": "del build",
     "start": "snowpack dev",
-    "build": "snowpack build"
+    "build": "npm run clean && snowpack build"
   },
   "devDependencies": {
     "@snowpack/plugin-build-script": "^2.0.11",
     "@snowpack/plugin-optimize": "^0.2.9",
+    "@snowpack/plugin-sass": "^1.1.1",
     "@snowpack/plugin-svelte": "^3.3.0",
     "autoprefixer": "^9.0.0",
+    "del-cli": "^3.0.1",
+    "node-sass": "^5.0.0",
     "snowpack": "^2.17.1",
     "svelte": "^3.0.0",
-    "svelte-i18n": "^3.2.6"
+    "svelte-i18n": "^3.2.6",
+    "svelte-preprocess": "^4.6.1"
   },
   "repository": {
     "type": "git",

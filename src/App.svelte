@@ -24,7 +24,7 @@
     <header class="App-header">
       <img src="/logo.svg" class="App-logo" alt="logo" />
       <p>{$_('app.header.editAndReload')}</p>
-      <p>{$_('app.header.pageHasBeenOpenFor', { values: { count }})}</p>
+      <p>{$_('app.header.pageHasBeenOpenFor', { values: { count } })}</p>
       <p>
         <a
           class="App-link"
@@ -38,7 +38,7 @@
   </div>
 {/if}
 
-<style>
+<style lang="scss">
   :global(body) {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -52,34 +52,34 @@
 
   .App {
     text-align: center;
+
+    .App-header {
+      background-color: #f9f6f6;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(10px + 2vmin);
+
+      .App-logo {
+        height: 36vmin;
+        pointer-events: none;
+        margin-bottom: 3rem;
+        animation: App-logo-spin infinite 1.6s ease-in-out alternate;
+      }
+
+      p {
+        margin: 0.4rem;
+      }
+
+      .App-link {
+        color: #ff3e00;
+      }
+    }
   }
-  .App code {
-    background: #0002;
-    padding: 4px 8px;
-    border-radius: 4px;
-  }
-  .App p {
-    margin: 0.4rem;
-  }
-  .App-header {
-    background-color: #f9f6f6;
-    color: #333;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-  }
-  .App-link {
-    color: #ff3e00;
-  }
-  .App-logo {
-    height: 36vmin;
-    pointer-events: none;
-    margin-bottom: 3rem;
-    animation: App-logo-spin infinite 1.6s ease-in-out alternate;
-  }
+
   @keyframes App-logo-spin {
     from {
       transform: scale(1);
