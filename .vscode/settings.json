@@ -12,5 +12,6 @@
     "javascriptreact",
     "html"
   ],
-  "eslint.packageManager": "yarn"
+  "eslint.packageManager": "yarn",
+  "css.validate": false
 }

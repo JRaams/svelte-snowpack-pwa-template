@@ -2,14 +2,10 @@
 module.exports = {
   mount: {
     public: '/',
-    src: '/_dist_',
+    src: '/_dist_'
   },
   plugins: [
     '@snowpack/plugin-svelte',
-    '@snowpack/plugin-sass',
-    // [
-    //   '@snowpack/plugin-optimize',
-    //   { preloadModules: true}
-    // ]
+    '@snowpack/plugin-sass'
   ]
 };

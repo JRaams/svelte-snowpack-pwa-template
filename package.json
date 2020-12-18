@@ -5,7 +5,9 @@
   "scripts": {
     "clean": "del build",
     "start": "snowpack dev",
-    "build": "npm run clean && snowpack build"
+    "build": "npm run clean && snowpack build",
+    "fix": "npx eslint --fix \"{,!(node_modules|public)/**/}*.{js,svelte}\"",
+    "format": "npx prettier --write \"{,!(node_modules|public)/**/}*.{js,svelte}\""
   },
   "devDependencies": {
     "@snowpack/plugin-build-script": "^2.0.11",
@@ -13,9 +15,19 @@
     "@snowpack/plugin-sass": "^1.1.1",
     "@snowpack/plugin-svelte": "^3.3.0",
     "autoprefixer": "^9.0.0",
+    "babel-eslint": "^10.1.0",
     "del-cli": "^3.0.1",
-    "eslint-plugin-svelte3": "^2.7.3",
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-svelte3": "^3.0.0",
     "node-sass": "^5.0.0",
+    "prettier": "^2.2.1",
+    "prettier-plugin-svelte": "^1.4.2",
     "snowpack": "^2.17.1",
     "svelte": "^3.0.0",
     "svelte-i18n": "^3.2.6",
