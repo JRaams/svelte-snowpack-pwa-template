@@ -1,6 +1,6 @@
 <script>
-  import { isLoading, _, locale, locales } from "svelte-i18n";
-  import { onMount } from "svelte";
+  import { isLoading, _, locale, locales } from 'svelte-i18n';
+  import { onMount } from 'svelte';
   let count = 0;
   onMount(() => {
     const interval = setInterval(() => count++, 1000);
@@ -9,6 +9,30 @@
     };
   });
 </script>
+
+{#if !$isLoading}
+  <div class="language-select-wrapper">
+    <label for="language-select">{$_('app.language.label')}</label>
+    <select name="language-select" id="language-select" bind:value={$locale}>
+      {#each $locales as locale}
+        <option value={locale}>{locale}</option>
+      {/each}
+    </select>
+  </div>
+
+  <div class="App">
+    <header class="App-header">
+      <img src="/logo.svg" class="App-logo" alt="logo" />
+      <p>{$_('app.header.editAndReload')}</p>
+      <p>{$_('app.header.pageHasBeenOpenFor', { values: { count } })}</p>
+      <p>
+        <a class="App-link" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">
+          {$_('app.header.learnSvelte')}
+        </a>
+      </p>
+    </header>
+  </div>
+{/if}
 
 <style lang="scss">
   :global(body) {
@@ -61,31 +85,3 @@
     }
   }
 </style>
-
-{#if !$isLoading}
-  <div class="language-select-wrapper">
-    <label for="language-select">{$_('app.language.label')}</label>
-    <select name="language-select" id="language-select" bind:value={$locale}>
-      {#each $locales as locale}
-        <option value={locale}>{locale}</option>
-      {/each}
-    </select>
-  </div>
-
-  <div class="App">
-    <header class="App-header">
-      <img src="/logo.svg" class="App-logo" alt="logo" />
-      <p>{$_('app.header.editAndReload')}</p>
-      <p>{$_('app.header.pageHasBeenOpenFor', { values: { count } })}</p>
-      <p>
-        <a
-          class="App-link"
-          href="https://svelte.dev"
-          target="_blank"
-          rel="noopener noreferrer">
-          {$_('app.header.learnSvelte')}
-        </a>
-      </p>
-    </header>
-  </div>
-{/if}
