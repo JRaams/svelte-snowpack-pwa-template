@@ -4,12 +4,14 @@
   "license": "MIT",
   "scripts": {
     "clean": "del build",
+    "dev": "routify -r .routify -c start",
     "start": "snowpack dev",
-    "build": "npm run clean && snowpack build",
+    "build": "npm run clean && routify -r .routify -b && snowpack build",
     "fix": "npx eslint --fix \"{,!(node_modules|public)/**/}*.{js,svelte}\"",
     "format": "npx prettier --write \"{,!(node_modules|public)/**/}*.{js,svelte}\""
   },
   "devDependencies": {
+    "@roxi/routify": "^2.7.3",
     "@snowpack/plugin-build-script": "^2.0.11",
     "@snowpack/plugin-optimize": "^0.2.9",
     "@snowpack/plugin-sass": "^1.1.1",

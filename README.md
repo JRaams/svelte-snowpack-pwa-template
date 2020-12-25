@@ -13,11 +13,11 @@ Current:
 - [Sass](https://www.sass-lang.com/): CSS extension to make styling the app easier.
 - [Prettier](https://prettier.io/): Formats code issues like quote and semicolon usage.
 - [Eslint](https://eslint.org/): Finds and fixes problems in the code.
+- [Routify](https://routify.dev/): Automated routes based on file structure.
 
 Todo:
 
 - [PWA](https://en.wikipedia.org/wiki/Progressive_web_applications): allows the site to work offline, and achieve higher (mobile) performance.
-- [Routify](https://routify.dev/): Automated routes based on file structure.
 - [Tailwind](https://tailwindcss.com/): CSS Framework
 
 ## Get started
